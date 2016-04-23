@@ -19,9 +19,9 @@ var checkCedula = function(){
     console.log(count);
     console.log(numChar);
     if ((numChar.length > 10 ) || (numChar == "") || (numChar.length < 10)){
-        alert('Numero de cedula no valido');
+        alert('Número de cedula no válido');
     } else {
-        alert('Numero de cedula valido');
+        alert('Número de cedula válido');
     }
 }
 

@@ -1,37 +1,35 @@
-//Declara variables
 
-var nombre = 'Carolina Isaza';
-edad = 21;
+var nombre = "Carlos PeMo";
+edad = 29;
 
-// Condicionales 
-/*if(edad  > 18 ){
-	alert("Es mayor de edad");
-}else{
-	alert ("Es menor de edad");
+
+if(edad > 18) {
+	mayorEdad = "Es mayor de edad.";
+} else {
+	mayorEdad = "Es menor de edad.";
+}
+alert(nombre + " " + mayorEdad);
+
+num = prompt("Digite un numero entre 1 y 4.");
+switch (num) {
+case '1': 
+	console.log('1');
+	break;
+case '2':
+	console.log('1');
+	break;
+default:
+	console.log("No válido :(")
 }
 
-var num = prompt('Digite un número de 1-2');
-
-switch(num){
-	case '1':
-		console.log('1');
-		break;
-	case '2': 
-		console.log('2');
-		break;
-	default: 
-		console.log('Número no válido');
-		break;
-}*/
-
-var numero = prompt('Digite un número factorial');
-
-
-var factorial = function(numero){
-	factorial = 1;
-	for (numero; numero > 0; numero --){
-		factorial *= numero;
+var numero = prompt("Digite un numero para calcular factorial.");
+var factorial = function(numero) {
+	if(numero < 0) {
+		alert("Digite un entero positivo.")
+		return;
+	} else if(numero - 1 === 0) {
+		return 1;
 	}
-	return factorial
+	return numero*factorial(numero - 1);
 }
 alert(factorial(numero));

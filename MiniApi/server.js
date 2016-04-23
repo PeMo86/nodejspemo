@@ -11,7 +11,7 @@ app.listen(port,function(){
 });
 
 app.get('/', function(req,res){
-	res.send('Bienvenido al mini api de saldos');
+	res.send('Bienvenid@s al mini api de saldos');
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -21,13 +21,13 @@ app.post('/postPrueba', function(req,res){
 	res.send('Ok :D')
 });
 
-var URL = 'postgres://xmfqyqom:ROg-Xw4R3ng7vi882-Shj7SG1zetplJR@pellefant.db.elephantsql.com:5432/xmfqyqom';
+var URL = 'postgres://jarikxvs:7upWQQm-o_uHw5nWYnQBJitU3Xwg_nfO@pellefant.db.elephantsql.com:5432/jarikxvs';
 var client = new pg.Client(URL);
 client.connect(function(err){
 	if(err){
-		return console.log('Error en la conexion con la bd')
+		return console.log('Error en la conexión con la bd')
 	}
-	console.log('Conexion hecha');
+	console.log('Conexión hecha');
 	client.end();
 });
 
@@ -51,10 +51,10 @@ app.post('/api/insertar', function(req, res){
             if(err){
                 res.send('Error :(');
                 client.end();
-                return console.log('Error en el query');
+                return console.log('Error en el Query');
             }
             console.log('Se insertó');
-            res.send('OK c:');
+            res.send('OK');
             client.end();
         });
     });
